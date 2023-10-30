@@ -1,9 +1,10 @@
 version: '3'
 services:
   web:
+    image: axayp/express-social-media-backend:1.0 #we already have deployed the image to docker-hub so using it directly
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: /bin/true  # Use a no-op command as the Dockerfile
     ports:
       - "3000:3000"
   db:
